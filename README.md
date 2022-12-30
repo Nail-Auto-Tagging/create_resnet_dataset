@@ -1,10 +1,11 @@
 # save-cropped-nails
-cropped_nail/ 디렉토리에 존재하는 이미지 파일들을 S3에 업로드하고 DB에 저장합니다.
+1. Source Directory에 존재하는 이미지 파일들을 S3에 업로드하고 DB에 저장합니다.
+2. Source Directory에 라벨링된 이미지 파일들을 8:1:1의 비율로 train:test:validation 셋으로 분할합니다
 
 ## Clone repository
 ```shell
-git clone https://github.com/Nail-Auto-Tagging/save-cropped-nails
-cd save-cropped-nails
+git clone https://github.com/Nail-Auto-Tagging/create_resnet_dataset
+cd create_resnet_dataset
 ```
 
 ## Install packages
@@ -12,8 +13,9 @@ cd save-cropped-nails
 pip install -r requirements.txt
 ```
 
-## Change directory path
-```main.py```의 DIRECTORY 경로 수정 (크롭된 네일 이미지 파일들이 있는 디렉토리)
+## Change arguments
+```main.py```의 Args 수정
+```divide_dataset.py```의 Args 수정
 
 ## Run code
 ```shell
